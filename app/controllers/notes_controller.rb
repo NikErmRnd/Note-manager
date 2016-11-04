@@ -10,10 +10,11 @@ class NotesController < ApplicationController
 
    @notes = @notes.all
    #@notes = Note.where(notebook: params[:notebook])
-   @notes = Note.where(access: current_user.role)
+   #@notes = Note.where(access: current_user.role)
+   #@notes = Note.where(book_id: @books.id)
     #@notes = @notes.where(notebook: 'Note1')
    # @notes = @notes.where()
-    
+
    # @notes = @notes.where()
    # @notes = @notes.where()
 
