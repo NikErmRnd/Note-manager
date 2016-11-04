@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -20,6 +20,12 @@ gem 'coffee-script-source'
 
 gem 'haml'
 gem 'simple_form'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
+gem 'devise'
+#gem 'twitter-bootstrap-rails'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -36,7 +42,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 
-gem 'devise'
+
 
 
 group :development, :test do
