@@ -1,0 +1,6 @@
+%h1 Create new NoteBook
+= link_to 'Вернуться к блокнотам', books_path
+
+= simple_form_for @book do |f|
+ =render partial: "form", locals: {f: f}
+ %p= f.submit "Создать"

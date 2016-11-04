@@ -1,0 +1,45 @@
+<h1>Notes </h1>
+<%= link_to 'Создать заметку', new_book_note_path %>
+<%= link_to 'Блокноты', books_path %>
+<%= link_to 'На главную', home_index_path %>
+
+
+
+<% if @notes.empty? %>
+<b>No notes now</b>
+<% else %>
+
+<table>
+  <tr>
+
+    <th>note id</th>
+    <th>note name</th>
+    <th>note body</th>
+    <th>note tags</th>
+    <% if Rails.env.development? %>
+      <th>#HIDE! note access</th>
+      <th>#HIDE! note notebook</th>
+
+
+    <% end %>
+
+
+
+    <% @notes.each do |i| %>
+
+    <tr data-note_id="<%= i.id %>">
+      <td><%= i.id %></td>
+      <td><%= link_to i.name, book_notes_path(i) %></td>
+      <td><%= i.body %></td>
+      <td><%= i.tags %></td>
+      <td><%= i.access %></td>
+      <td><%= i.notebook %></td>
+
+
+  </tr>
+
+  <% end %>
+
+</table>
+
+<% end %>

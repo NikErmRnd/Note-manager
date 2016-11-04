@@ -1,0 +1,34 @@
+<h1>NoteBooks </h1>
+<%= link_to 'Создать блокнот', new_book_path%>
+<%= link_to 'На главную', home_index_path %>
+
+
+<% if @books.empty? %>
+<b>No NoteBooks now</b>
+<% else %>
+
+<table>
+  <tr>
+
+    <th>NoteBook id</th>
+    <th>NoteBook name</th>
+    <th>#HIDE! NoteBook access</th>
+    <th>NoteBook tags</th>
+    <th>#HIDE! NoteBook contains</th>
+
+
+
+    <% @books.each do |i| %>
+
+    <tr data-book_id="<%= i.id %>">
+      <td><%= i.id %></td>
+      <td><%= link_to i.name, book_notes_path(i) %></td>
+      <td><%= i.access %></td>
+
+  </tr>
+
+  <% end %>
+
+</table>
+
+<% end %>
