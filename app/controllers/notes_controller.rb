@@ -7,8 +7,11 @@ class NotesController < ApplicationController
   def index
 
    @notes = Note
-   @notes = @notes.all
+   if (current_user.role == 'admin')
+     @notes = @notes.all
+   else
    @notes = Note.where(access: current_user.role)
+   end
    @notes = @notes.where(book_id: @books)
 
 
@@ -32,7 +35,7 @@ class NotesController < ApplicationController
     note_params = params.require(:note).permit!
     @note = Note.create(note_params)
     if @note.errors.empty?
-      redirect_to book_note_path(:books, @note) # /notes/:id
+      redirect_to book_notes_path # /notes/:id
 
     else
       render "new"
@@ -52,7 +55,7 @@ class NotesController < ApplicationController
     @note.update_attributes(params.require(:note).permit!)
 
     if @note.errors.empty?
-      redirect_to book_note_path(@note)
+      redirect_to book_notes_path(@note)
     else
       render "edit"
     end

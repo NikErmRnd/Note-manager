@@ -1,5 +1,7 @@
 
 = f.input :name, label: "name"
 
-= f.input :access
+Access
+= f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
 
+<br>

@@ -8,9 +8,14 @@ class BooksController < ApplicationController
 
     @books = Book
 
-    #@books = @books.all
-    #@books = Book.where(notebook: params[:notebook])
-    @books = Book.all#.where(access: 'admin')
+
+    if (current_user.role == 'admin')
+      @books = @books.all
+    else
+      @books = Book.where(access: current_user.role)
+    end
+
+
     # @books = @books.where()
     # @books = @books.where()
     # @books = @books.where()
