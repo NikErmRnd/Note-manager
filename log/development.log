@@ -8104,3 +8104,93 @@ Processing by NotesController#index as HTML
 Completed 200 OK in 221ms (Views: 192.6ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-11-04 13:46:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 771ms (Views: 706.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/persons/profile" for 127.0.0.1 at 2016-11-04 13:46:53 +0300
+Processing by PersonsController#profile as HTML
+  Rendering persons/profile.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered persons/profile.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 170ms (Views: 159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-11-04 13:46:57 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:BooksController> at C:/git/notedata/app/controllers/books_controller.rb:5)
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" IS NULL ORDER BY "books"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 193ms (Views: 163.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/1/notes" for 127.0.0.1 at 2016-11-04 13:46:58 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:NotesController> at C:/git/notedata/app/controllers/notes_controller.rb:4)
+Processing by NotesController#index as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" IS NULL ORDER BY "notes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  Rendered notes/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 206ms (Views: 164.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/9/notes" for 127.0.0.1 at 2016-11-04 13:46:59 +0300
+Processing by NotesController#index as HTML
+  Parameters: {"book_id"=>"9"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" IS NULL ORDER BY "notes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  Rendered notes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 196ms (Views: 183.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/10/notes" for 127.0.0.1 at 2016-11-04 13:47:01 +0300
+Processing by NotesController#index as HTML
+  Parameters: {"book_id"=>"10"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" IS NULL ORDER BY "notes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  Rendered notes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 194ms (Views: 167.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/11/notes" for 127.0.0.1 at 2016-11-04 13:47:01 +0300
+Processing by NotesController#index as HTML
+  Parameters: {"book_id"=>"11"}
+  [1m[36mNote Load (1.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" IS NULL ORDER BY "notes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  Rendered notes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 193ms (Views: 165.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/books/10/notes" for 127.0.0.1 at 2016-11-04 13:47:02 +0300
+Processing by NotesController#index as HTML
+  Parameters: {"book_id"=>"10"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" IS NULL ORDER BY "notes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."access" = ?[0m  [["access", "user"]]
+  Rendered notes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 188ms (Views: 162.0ms | ActiveRecord: 0.5ms)
+
+
