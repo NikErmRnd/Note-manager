@@ -13,6 +13,7 @@ class NotesController < ApplicationController
    @notes = Note.where(access: current_user.role)
     #@notes = @notes.where(notebook: 'Note1')
    # @notes = @notes.where()
+    
    # @notes = @notes.where()
    # @notes = @notes.where()
 
