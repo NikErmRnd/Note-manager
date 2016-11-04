@@ -2,21 +2,15 @@ class NotesController < ApplicationController
 
   before_action :find_note
   before_filter :authenticate_user!
-
+  before_action :set_book, only: [:index, :show]
 
   def index
 
-    @notes = Note
-
+   @notes = Note
    @notes = @notes.all
-   #@notes = Note.where(notebook: params[:notebook])
-   #@notes = Note.where(access: current_user.role)
-   #@notes = Note.where(book_id: @books.id)
-    #@notes = @notes.where(notebook: 'Note1')
-   # @notes = @notes.where()
+   @notes = Note.where(access: current_user.role)
+   @notes = @notes.where(book_id: @books)
 
-   # @notes = @notes.where()
-   # @notes = @notes.where()
 
   end
 
@@ -73,9 +67,9 @@ class NotesController < ApplicationController
    # render_404 unless @note
   end
 
-  def find_notebook
-    @note = Note.where(notebook: params[:notebook]).first
-    # render_404 unless @note
+
+  def set_book
+    @books = Book.find(params[:book_id])
   end
 
 end

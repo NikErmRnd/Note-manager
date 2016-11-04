@@ -9,6 +9,8 @@
 <b>No notes now</b>
 <% else %>
 
+
+
 <table>
 
 
@@ -27,9 +29,11 @@
 
     <% @notes.each do |i| %>
 
+
+
     <tr data-note_id="<%= i.id %>">
       <td><%= i.id %></td>
-      <td><%= link_to i.name, book_notes_path(i) %></td>
+      <td><%= link_to i.name, book_note_path(i.book_id , i) %></td>
       <td><%= i.body %></td>
       <td><%= i.tags %></td>
       <td><%= i.access %></td>
