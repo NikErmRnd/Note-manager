@@ -24,6 +24,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
 gem 'devise'
+gem 'paperclip'
+gem 'cocaine'
 #gem 'twitter-bootstrap-rails'
 
 

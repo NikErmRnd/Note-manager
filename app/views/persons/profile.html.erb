@@ -11,6 +11,10 @@
 Роль:
 <%= link_to current_user.role %>
 <br>
+<%= image_tag current_user.avatar.url(:medium)  %>
+<br>
+<%= current_user.avatar.url %>
+
 <td><%= button_to "редактировать профиль", edit_user_registration_path, method: :get %></td>
 <br>
 <%= link_to 'На главную', home_index_path %>
