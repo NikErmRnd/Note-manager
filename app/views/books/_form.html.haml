@@ -1,7 +1,9 @@
 
 = f.input :name, label: "name"
 
-Access
-= f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
+
+= if (current_user.role == 'admin')
+      Access
+      f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
 
 <br>

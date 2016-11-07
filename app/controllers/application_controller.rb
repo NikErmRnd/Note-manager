@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
     current_user.sign_in_count >= 1 ? "/home/index" : "#{current_user.role}"
   end
 
+  def check_if_admin
+     render text: "Access denied, you is not admin's right", status: 403 unless (current_user.role=="admin")
+    # render_403 unless params[:admin]
+  end
+
   protected
 
   def configure_permitted_parameters

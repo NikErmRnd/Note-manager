@@ -1,6 +1,8 @@
 <h1>NoteBooks </h1>
-<%= link_to 'Создать блокнот', new_book_path%>
 <%= link_to 'На главную', home_index_path %>
+<br><br>
+<%= button_to 'Создать блокнот', new_book_path%>
+
 
 
 <% if @books.empty? %>
@@ -23,6 +25,8 @@
       <td><%= i.id %></td>
       <td><%= link_to i.name, book_notes_path(i) %></td>
       <td><%= i.access %></td>
+      <td><%= button_to "редактировать", edit_book_path(i, admin: params[:admin]), method: :get %></td>
+      <td><%= button_to "удалить", book_path(i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"} %></td>
 
   </tr>
 

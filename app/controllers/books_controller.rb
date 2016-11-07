@@ -3,6 +3,7 @@ class BooksController < ApplicationController
 
   before_action :find_book
   before_filter :authenticate_user!
+  before_action :check_if_admin, only: [:destroy]
 
   def index
 
@@ -63,6 +64,14 @@ class BooksController < ApplicationController
     end
 
 
+  end
+
+  def destroy
+    @book.destroy
+     redirect_to action: "index"
+    #render json: { success: true }
+    #render books_path
+  ##  ItemsMailer.item_destroyed(@item).deliver
   end
 
 

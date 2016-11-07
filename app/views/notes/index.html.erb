@@ -1,7 +1,9 @@
 <h1>Notes </h1>
-<%= link_to 'Создать заметку', new_book_note_path %>
-<%= link_to 'Блокноты', books_path %>
 <%= link_to 'На главную', home_index_path %>
+<br><br>
+<%= button_to 'Создать заметку', new_book_note_path %>
+<%= button_to 'Блокноты', books_path %>
+
 
 
 
@@ -38,6 +40,8 @@
       <td><%= i.tags %></td>
       <td><%= i.access %></td>
       <td><%= i.book %></td>
+      <td><%= button_to "редактировать", edit_book_note_path(i.book_id , i, admin: params[:admin]), method: :get %></td>
+      <td><%= button_to "удалить", book_note_path(i.book_id , i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"} %></td>
 
 
   </tr>
