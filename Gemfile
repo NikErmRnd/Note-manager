@@ -26,6 +26,7 @@ gem 'omniauth-vkontakte'
 gem 'devise'
 gem 'paperclip'
 gem 'cocaine'
+gem 'bootstrap-sass'
 #gem 'twitter-bootstrap-rails'
 
 

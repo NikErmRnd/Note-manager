@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   get 'persons/profile', as: 'user_root'
 
+  resources :tags, only: [:show]
+
   resources :books do
     resources :notes
   end

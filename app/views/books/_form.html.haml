@@ -1,6 +1,8 @@
 
 = f.input :name, label: "name"
 
+= f.text_field :all_tags, label: "tags"
+
 
 = if (current_user.role == 'admin')
       Access
