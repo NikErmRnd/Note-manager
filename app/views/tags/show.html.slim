@@ -1,0 +1,5 @@
+h1 = @tag.name
+- if @tag.books.empty?
+    h2 Блокнотов нет
+- else
+    = render @tag.books

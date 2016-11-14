@@ -1,0 +1,13 @@
+= f.input :name, label: "name"
+= f.text_field :all_tags, label: "tags"
+br
+|Access &nbsp;
+- if current_user.role == 'admin'
+  = f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
+- else
+  = f.select :access, options_for_select(["user"],:disabled => ["Select One"])
+
+
+
+
+br

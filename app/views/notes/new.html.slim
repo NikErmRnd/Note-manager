@@ -1,6 +1,5 @@
-%h1 Create new Note
+h1 Create new Note
 = link_to 'Вернуться к заметкам', :back
-
 = simple_form_for([:book, @note]) do |f|
  = render partial: "form", locals: {f: f}
- %p= f.submit "Создать"
+ p= f.submit "Создать"

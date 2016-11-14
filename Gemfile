@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'coffee-script-source'
 
 gem 'haml'
+gem 'slim-rails'
 gem 'simple_form'
 gem 'omniauth'
 gem 'omniauth-facebook'

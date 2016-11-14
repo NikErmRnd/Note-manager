@@ -1,0 +1,7 @@
+h1 Edit Note
+= link_to 'Вернуться к заметкам', :back
+= simple_form_for([:book, @note]) do |f|
+   = render partial: "form", locals: {f: f}
+   br
+   = f.submit "Save"
+

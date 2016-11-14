@@ -1,0 +1,9 @@
+
+= f.input :name, label: "name"
+= f.input :body
+= f.input :tags
+| NoteBook
+= f.select( :book_id, Book.all.map {|i| [i.name, i.id]})
+- if current_user.role == 'admin'
+  = f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
+     /Ascces
