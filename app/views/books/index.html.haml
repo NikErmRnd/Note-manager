@@ -1,0 +1,21 @@
+%h1 NoteBooks
+= link_to 'На главную', home_index_path
+%br
+= link_to 'Создать блокнот', new_book_path
+- if @books.empty?
+  %b No NoteBooks now
+- else
+  %table
+    %tr
+      %th NoteBook id
+      %th NoteBook name
+      %th #HIDE! NoteBook access
+      %th NoteBook tags
+      - @books.each do |i|
+        %tr{"data-book_id" => i.id}
+          %td= i.id
+          %td= link_to i.name, book_notes_path(i)
+          %td= i.access
+          %td= raw i.tags.map(&:name).map { |t| link_to t, tag_path(t), class: 'tag tag-primary'}.join(' ')
+          %td= button_to "редактировать", edit_book_path(i, admin: params[:admin]), method: :get
+          %td= button_to "удалить", book_path(i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"}

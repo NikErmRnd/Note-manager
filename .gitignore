@@ -2,6 +2,8 @@ files/
 test/
 tmp/
 public/system
-.idea
+.idea/
 log/
 .idea/workspace.xml
+.idea/notedata.iml
+.idea/.generators
