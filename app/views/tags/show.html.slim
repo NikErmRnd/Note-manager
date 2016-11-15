@@ -1,5 +1,11 @@
 h1 = @tag.name
+
+= link_to 'Блокноты', books_path
+
 - if @tag.books.empty?
-    h2 Блокнотов нет
+  h2 Блокнотов нет
 - else
-    = render @tag.books
+  - @tag.books.each do |book|
+    div
+      h3 = book.name
+      = link_to "Перейти", book

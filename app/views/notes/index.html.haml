@@ -1,13 +1,13 @@
 %h1 Notes
 = link_to 'На главную', home_index_path
-%br/
-%br/
+%br
+%br
 = link_to 'Создать заметку', new_book_note_path
 = link_to 'Блокноты', books_path
 - if @notes.empty?
   %b No notes now
 - else
-  %table
+  %table.table
     %th note id
     %th note name
     %th note body
@@ -16,7 +16,7 @@
       %th #HIDE! note access
       %th #HIDE! note notebook
     - @notes.each do |i|
-      %tr{"data-note_id" => i.id}
+      %tr
         %td= i.id
         %td= link_to i.name, book_note_path(i.book_id , i)
         %td= i.body

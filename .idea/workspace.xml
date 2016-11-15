@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5792054c-8bbe-456b-b652-3e2213de3884" name="Default" comment="fixed UI links">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/books/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/books/_form.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/books/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/books/edit.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/books/new.html.haml" afterPath="$PROJECT_DIR$/app/views/books/new.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/books/show.html.haml" afterPath="$PROJECT_DIR$/app/views/books/show.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/notes/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/notes/_form.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/notes/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/edit.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/notes/new.html.haml" afterPath="$PROJECT_DIR$/app/views/notes/new.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/notes/show.html.haml" afterPath="$PROJECT_DIR$/app/views/notes/show.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/persons/profile.html.erb" afterPath="$PROJECT_DIR$/app/views/persons/profile.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/tags/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tags/show.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/users/omniauth_callbacks/facebook.html.erb" afterPath="$PROJECT_DIR$/app/views/users/omniauth_callbacks/facebook.html.slim" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/users/omniauth_callbacks/vkontakte.html.erb" afterPath="$PROJECT_DIR$/app/views/users/omniauth_callbacks/vkontakte.html.slim" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/notedata.iml" afterPath="$PROJECT_DIR$/.idea/notedata.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/books/index.html.haml" afterPath="$PROJECT_DIR$/app/views/books/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notes/index.html.haml" afterPath="$PROJECT_DIR$/app/views/notes/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/show.html.slim" afterPath="$PROJECT_DIR$/app/views/tags/show.html.slim" />
     </list>
     <ignored path="notedata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/notedata@Development__notedata.coverage" NAME="Development: notedata Coverage Results" MODIFIED="1479141158533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="notedata" />
+    <SUITE FILE_PATH="coverage/notedata@Development__notedata.coverage" NAME="Development: notedata Coverage Results" MODIFIED="1479237921317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="notedata" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -58,6 +41,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/books/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/notes/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -84,16 +87,6 @@
         </entry>
       </file>
       <file leaf-file-name="new.html.slim" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/books/new.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/notes/new.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -103,22 +96,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/notes/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="profile.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/persons/profile.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+              <folding>
+                <marker date="1479237798993" expanded="true" signature="19:69" ph="p Find me in app/views/persons/profile.html.erb" />
+                <marker date="1479237798993" expanded="true" signature="70:90" ph="= current_user.email" />
+                <marker date="1479237798993" expanded="true" signature="91:93" ph="br" />
+                <marker date="1479237798993" expanded="true" signature="94:110" ph="| Дата создания:" />
+                <marker date="1479237798993" expanded="true" signature="111:136" ph="= current_user.created_at" />
+                <marker date="1479237798993" expanded="true" signature="137:139" ph="br" />
+                <marker date="1479237798993" expanded="true" signature="140:147" ph="| Роль:" />
+                <marker date="1479237798993" expanded="true" signature="148:175" ph="= link_to current_user.role" />
+                <marker date="1479237798993" expanded="true" signature="176:178" ph="br" />
+                <marker date="1479237798993" expanded="true" signature="179:223" ph="= image_tag current_user.avatar.url(:medium)" />
+                <marker date="1479237798993" expanded="true" signature="224:226" ph="br" />
+                <marker date="1479237798993" expanded="true" signature="227:253" ph="= current_user.avatar.url" />
+                <marker date="1479237798993" expanded="true" signature="254:335" ph="td = button_to &quot;редактировать профиль&quot;, edit_user_registration_path, method: :get" />
+                <marker date="1479237798993" expanded="true" signature="339:451" ph="= link_to 'На главную', home_index_path" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,8 +124,8 @@
       <file leaf-file-name="show.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tags/show.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -161,9 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/app/views/notes/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/notes/show.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
@@ -205,13 +200,16 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
         <option value="$PROJECT_DIR$/app/views/notes/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/books/_form.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/notes/_form.html.slim" />
         <option value="$PROJECT_DIR$/app/views/notes/edit.html.slim" />
         <option value="$PROJECT_DIR$/app/views/notes/new.html.slim" />
         <option value="$PROJECT_DIR$/app/views/persons/profile.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/tags/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/users/omniauth_callbacks/facebook.html.slim" />
         <option value="$PROJECT_DIR$/app/views/users/omniauth_callbacks/vkontakte.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/notes/_form.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/notes/index.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/tags/show.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/notes/index.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/books/index.html.haml" />
       </list>
     </option>
   </component>
@@ -259,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -628,6 +625,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
       <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
@@ -840,6 +838,7 @@
       <workItem from="1479136829606" duration="1489000" />
       <workItem from="1479138011732" duration="3439000" />
       <workItem from="1479141137651" duration="746000" />
+      <workItem from="1479237845011" duration="1181000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1478254335251</created>
@@ -943,7 +942,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80233000" />
+    <option name="totallyTimeSpent" value="81414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -958,13 +957,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3097015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3128998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29083246" sideWeight="0.5682303" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5724947" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51211804" sideWeight="0.43176973" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51211804" sideWeight="0.42750534" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.48720682" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3825079" sideWeight="0.7910448" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3825079" sideWeight="0.7878465" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1007,21 +1006,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161104164718_add_omniauth_to_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1241,7 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,13 +1235,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/books/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/books/index.html.erb" />
     <entry file="file://$PROJECT_DIR$/app/views/layouts/mailer.text.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1270,7 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,17 +1314,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/persons/profile.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tags/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding>
+            <marker date="1479237798993" expanded="true" signature="19:69" ph="p Find me in app/views/persons/profile.html.erb" />
+            <marker date="1479237798993" expanded="true" signature="70:90" ph="= current_user.email" />
+            <marker date="1479237798993" expanded="true" signature="91:93" ph="br" />
+            <marker date="1479237798993" expanded="true" signature="94:110" ph="| Дата создания:" />
+            <marker date="1479237798993" expanded="true" signature="111:136" ph="= current_user.created_at" />
+            <marker date="1479237798993" expanded="true" signature="137:139" ph="br" />
+            <marker date="1479237798993" expanded="true" signature="140:147" ph="| Роль:" />
+            <marker date="1479237798993" expanded="true" signature="148:175" ph="= link_to current_user.role" />
+            <marker date="1479237798993" expanded="true" signature="176:178" ph="br" />
+            <marker date="1479237798993" expanded="true" signature="179:223" ph="= image_tag current_user.avatar.url(:medium)" />
+            <marker date="1479237798993" expanded="true" signature="224:226" ph="br" />
+            <marker date="1479237798993" expanded="true" signature="227:253" ph="= current_user.avatar.url" />
+            <marker date="1479237798993" expanded="true" signature="254:335" ph="td = button_to &quot;редактировать профиль&quot;, edit_user_registration_path, method: :get" />
+            <marker date="1479237798993" expanded="true" signature="339:451" ph="= link_to 'На главную', home_index_path" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1368,10 +1351,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/notes/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/notes/index.html.erb" />
+    <entry file="file://$PROJECT_DIR$/app/views/tags/show.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/notes/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/books/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding />
         </state>
       </provider>
