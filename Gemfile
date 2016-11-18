@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
+
 gem 'devise'
 gem 'paperclip'
 gem 'cocaine'

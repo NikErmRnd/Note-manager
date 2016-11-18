@@ -1,19 +1,29 @@
 h1 Home#index
 p Find me in app/views/home/index.html.haml
 
+
+/= button_to home_index_path, class: 'btn btn-sm btn-primary' do
+  i.glyphicon.glyphicon-heart
+    |Accept
+
+/button.btn.btn-default.btn-lg type="button"
+  i.glyphicon.glyphicon-star
+  | Star
+
+
+
+
+
 - if user_signed_in?
   span Здравствуйте,
   = link_to current_user.email, persons_profile_path
-  | &nbsp;
-  = link_to 'Выйти', destroy_user_session_path, method: :delete
-  br
-  br
-  = link_to 'Блокноты', books_path
+  = button_to('Выйти', destroy_user_session_path, :class => 'btn btn-sm btn-primary', method: :delete)
+  = button_to('Блокноты', books_path, :class => 'btn btn-sm btn-primary', method: :get)
 - else
-  = link_to 'Войти', new_user_session_path
-  |&nbsp; или &nbsp;
-  = link_to 'Зарегистрироваться', new_user_registration_path
-  | &nbsp;&nbsp;
+  = button_to('Войти', new_user_session_path, :class => 'btn btn-sm btn-primary', method: :get)
+  = button_to('Зарегистрироваться', new_user_registration_path, :class => 'btn btn-sm btn-primary', method: :get)
   = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path
+  /= link_to "Sign in with Facebook", user_vkontakte_omniauth_authorize_path
+  /= link_to('Sign in with Vkontakte', user_vlontakte_omniauth_authorize_path, :class => 'btn btn-sm btn-primary', method: :get)
   br
 
