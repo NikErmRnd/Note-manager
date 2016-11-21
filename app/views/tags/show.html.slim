@@ -1,6 +1,8 @@
+
+|Выбранный тег:
 h1 = @tag.name
 
-= link_to 'Блокноты', books_path
+= link_to 'Блокноты', books_path , class: "btn btn-primary"
 
 - if @tag.books.empty?
   h2 Блокнотов нет
@@ -8,4 +10,4 @@ h1 = @tag.name
   - @tag.books.each do |book|
     div
       h3 = book.name
-      = link_to "Перейти", book
+      = link_to "Перейти", book , class: "btn btn-primary"
