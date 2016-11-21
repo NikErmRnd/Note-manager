@@ -1,12 +1,12 @@
 %h1 Блокноты
-= button_to('На главную', home_index_path, :class => 'btn btn-sm btn-primary', method: :get)
+= button_to('На главную', home_index_path, class: "btn btn-sm btn-primary", method: :get)
 
-= button_to('Создать блокнот', new_book_path, :class => 'btn btn-sm btn-primary', method: :get)
+= button_to('Создать блокнот', new_book_path, class: "btn btn-sm btn-primary", method: :get)
 
 
 
 - if @books.empty?
-  %b No NoteBooks now
+  %b Блокнотов не найдено
 - else
   %table.table
     %tr
@@ -20,5 +20,5 @@
           %td= link_to i.name, book_notes_path(i)
           %td= i.access
           %td= raw i.tags.map(&:name).map { |t| link_to t, tag_path(t), class: 'tag tag-primary'}.join(' ')
-          %td= button_to "редактировать", edit_book_path(i, admin: params[:admin]), method: :get, class: "btn btn-primary"
-          %td= button_to "удалить", book_path(i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"}, class: "btn btn-primary"
+          %td= button_to "редактировать", edit_book_path(i, admin: params[:admin]), method: :get, class: "btn btn-sm btn-primary"
+          %td= button_to "удалить", book_path(i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"}, class: "btn btn-sm btn-primary"

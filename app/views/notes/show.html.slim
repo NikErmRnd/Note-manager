@@ -1,10 +1,9 @@
 h1 Note
 
-= link_to 'Вернуться к заметкам', :back
+= link_to 'Вернуться к заметкам', :back, class: "btn btn-sm btn-primary"
 
 ul
   li= @note.name
   li= @note.body
   li= @note.tags
   li= @note.access
-  li= @note.book_id

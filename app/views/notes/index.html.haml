@@ -1,20 +1,18 @@
-%h1 Notes
-= link_to 'На главную', home_index_path
+%h1 Заметки
+= link_to 'На главную', home_index_path , class: "btn btn-sm btn-primary"
 %br
-%br
-= link_to 'Создать заметку', new_book_note_path
-= link_to 'Блокноты', books_path
+= link_to 'Создать заметку', new_book_note_path , class: "btn btn-sm btn-primary"
+= link_to 'Блокноты', books_path , class: "btn btn-sm btn-primary"
 - if @notes.empty?
-  %b No notes now
+  %b Заметок не найдено
 - else
   %table.table
-    %th note id
-    %th note name
-    %th note body
-    %th note tags
+    %th Номер
+    %th Имя
+    %th Содержание
+    %th Теги
     - if Rails.env.development?
-      %th #HIDE! note access
-      %th #HIDE! note notebook
+      %th Доступ
     - @notes.each do |i|
       %tr
         %td= i.id
@@ -22,6 +20,5 @@
         %td= i.body
         %td= i.tags
         %td= i.access
-        %td= i.book
-        %td= button_to "редактировать", edit_book_note_path(i.book_id , i, admin: params[:admin]), method: :get
-        %td= button_to "удалить", book_note_path(i.book_id , i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"}
+        %td= button_to "редактировать", edit_book_note_path(i.book_id , i, admin: params[:admin]), method: :get , class: "btn btn-sm btn-primary"
+        %td= button_to "удалить", book_note_path(i.book_id , i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"} , class: "btn btn-sm btn-primary"

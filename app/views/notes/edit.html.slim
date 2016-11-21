@@ -1,7 +1,7 @@
-h1 Edit Note
-= link_to 'Вернуться к заметкам', :back
+h1 Редактирование заметки
+= link_to 'Вернуться к заметкам', :back  , class: "btn btn-sm btn-primary"
 = simple_form_for([:book, @note]) do |f|
    = render partial: "form", locals: {f: f}
    br
-   = f.submit "Save"
+   = f.submit "Сохранить" , class: "btn btn-sm btn-primary"
 

@@ -1,6 +1,8 @@
-= f.input :name, label: "имя"
-|теги &nbsp;&nbsp;
-= f.text_field :all_tags, label: "теги"
+|Имя:&nbsp;
+= f.text_field :name
+br
+|Теги:&nbsp;
+= f.text_field :all_tags
 br
 |Доступ&nbsp;
 - if current_user.role == 'admin'

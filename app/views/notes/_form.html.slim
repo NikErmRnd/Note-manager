@@ -1,10 +1,16 @@
-
-= f.input :name, label: "name"
-= f.input :body
-= f.input :tags
-| NoteBook
+|&emsp;&emsp;&emsp;&emsp;Имя:&nbsp;
+= f.text_field :name
+br
+|Содержимое:&nbsp;
+= f.text_field :body
+br
+|&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Теги:&nbsp;
+= f.text_field :tags, label: "Теги"
+br
+|&emsp;&emsp;Блокнот:&nbsp;
 = f.select( :book_id, Book.all.map {|i| [i.name, i.id]})
-
+br
+|&emsp;&emsp;&nbsp;&nbsp;Доступ:&nbsp;
 - if current_user.role == 'admin'
   = f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
      /Ascces
