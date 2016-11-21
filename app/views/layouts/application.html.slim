@@ -3,7 +3,11 @@ html
   head
    title Notedata
    = csrf_meta_tags
-
+   - if user_signed_in?
+    span Здравствуйте,&nbsp
+    = link_to current_user.email, persons_profile_path
+    |&nbsp;
+    = link_to('Выход', destroy_user_session_path, method: :delete)
    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
