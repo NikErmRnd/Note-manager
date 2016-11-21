@@ -1,6 +1,6 @@
-h1 Edit NoteBook
+h1 Изменение блокнота
 
 = simple_form_for @book do |f|
   = render partial: "form", locals: {f: f}
-  p = f.submit "Save"
+  p = f.submit "Сохранить", class: "btn btn-primary"
 

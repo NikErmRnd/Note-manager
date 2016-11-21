@@ -1,23 +1,15 @@
-﻿h1 Persons#profile
-p Find me in app/views/persons/profile.html.erb
-
-
-
+﻿h1 Профиль пользователя
+| email:&nbsp
 = current_user.email
 br
-| Дата создания:
+| Дата создания:&nbsp
 = current_user.created_at
 br
-| Роль:
+| Роль:&nbsp
 = current_user.role
 br
 = image_tag current_user.avatar.url(:medium)
-br
-= current_user.avatar.url
 
-td = button_to "редактировать профиль", edit_user_registration_path, method: :get
-br
-= link_to 'На главную', home_index_path
 
-/<p class="notice"><%= notice %></p>
-/<p class="alert"><%= alert %></p>
+td = button_to "редактировать профиль", edit_user_registration_path, method: :get, class: "btn btn-primary"
+= link_to 'На главную', home_index_path, class: "btn btn-primary"

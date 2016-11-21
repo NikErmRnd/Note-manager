@@ -1,6 +1,5 @@
-h1 Create new NoteBook
-= link_to 'Вернуться к блокнотам', books_path
-
+h1 Новый блокнот
+= link_to 'Вернуться к блокнотам', books_path, class: "btn btn-primary"
 = simple_form_for @book do |f|
  =render partial: "form", locals: {f: f}
- p= f.submit "Создать"
+ p= f.submit "Создать", class: "btn btn-primary"
