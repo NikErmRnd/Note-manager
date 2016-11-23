@@ -1,4 +1,5 @@
-class Users::OmniauthCallbacksController < ApplicationController
+class Users::OmniauthCallbacksController <Devise::OmniauthCallbacksController
+=begin
   def facebook
     @user = User.find_for_facebook_oauth request.env["omniauth.auth"]
     if @user.persisted?
@@ -19,4 +20,11 @@ end
       redirect_to root_path
     end
   end
+=end
+
+  def github
+      @user = User.from_omniauth(request.env["omniauth.auth"])
+      sign_in_and_redirect @user
+    end
+
 end

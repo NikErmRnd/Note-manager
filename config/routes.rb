@@ -1,23 +1,14 @@
 Rails.application.routes.draw do
 
-  #devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: "users/omniauth_callbacks" }
 
+  devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: "users/omniauth_callbacks" } do
 
-  get 'auth/:provider/callback', to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroy', as: 'signout'
-
-  #resources :users, :only => [:index, :destroy]
- # root :to => 'users#index'
-
-  namespace :users do
-    get 'omniauth_callbacks/facebook'
   end
 
-  namespace :users do
-    get 'omniauth_callbacks/vkontakte'
-  end
+
+ # get 'auth/:provider/callback', to: 'sessions#create'
+ # get 'auth/failure', to: redirect('/')
+ # get 'signout', to: 'sessions#destroy', as: 'signout'
 
   get 'home/index'
 

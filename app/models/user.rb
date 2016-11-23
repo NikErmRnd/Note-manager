@@ -16,11 +16,12 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
-  devise :omniauthable, :omniauth_providers => [:facebook]
+  devise :omniauthable
   #enum role: { member: 1, admin: 2 }
 
   before_create :assign_default_role
 
+=begin
     def self.find_for_facebook_oauth access_token
       user = User.where(:url => access_token.info.urls.Facebook).first
       if user.persisted?
@@ -34,20 +35,26 @@ class User < ApplicationRecord
                      :password => Devise.friendly_token[0,20])
       end
     end
+=end
 
     def self.from_omniauth(auth)
-      where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.provider = auth.provider
         user.uid = auth.uid
+        user.email = auth.info.email
+        user.password = Devise.friendly_token[0,20]
+=begin
         user.name = auth.info.name
         user.oauth_token = auth.credentials.token
         user.oauth_expires_at = Time.at(auth.credentials.expires_at)
         user.save!
+=end
       end
     end
 
 
 
+=begin
     def self.find_for_vkontakte_oauth access_token
     if user = User.where(:url => access_token.info.urls.Vkontakte).first
       user
@@ -61,6 +68,7 @@ class User < ApplicationRecord
 
     end
     end
+=end
 
     private
 

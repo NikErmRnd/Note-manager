@@ -2,7 +2,8 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
 
-  config.omniauth :facebook, "797020357105836", "3d8afb5470d518e78b9e601e3203667b"
+  config.omniauth :github, '8f79e70be47f4b121b8f', '31c6af4888ad9c61e19c71c8cba2c0fbc0e3e208', :scope => 'user:email'
+  #config.omniauth :facebook, "797020357105836", "3d8afb5470d518e78b9e601e3203667b"
   #config.omniauth :vkontakte, "5735317", "5LQp3jMrXxN3KH26hpHS",
 
 

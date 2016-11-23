@@ -22,9 +22,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'slim-rails'
 gem 'simple_form'
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'omniauth-vkontakte'
+gem 'omniauth-github'
+
 
 gem 'devise'
 gem 'paperclip'
