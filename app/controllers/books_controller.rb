@@ -16,13 +16,6 @@ class BooksController < ApplicationController
       @books = Book.where(access: current_user.role)
     end
 
-
-
-
-    # @books = @books.where()
-    # @books = @books.where()
-    # @books = @books.where()
-
   end
 
   def show
