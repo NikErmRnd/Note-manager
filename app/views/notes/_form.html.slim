@@ -1,5 +1,6 @@
 |&emsp;&emsp;&emsp;&emsp;Имя:&nbsp;
 = f.text_field :name
+=@note.errors.full_messages.join(', ')
 br
 |Содержимое:&nbsp;
 = f.text_field :body
@@ -12,5 +13,6 @@ br
 br
 |&emsp;&emsp;&nbsp;&nbsp;Доступ:&nbsp;
 - if current_user.role == 'admin'
-  = f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
-     /Ascces
+  = f.select :access, options_for_select(["admin", "user"], :disabled => ["Select One"])
+- else
+  = f.select :access, options_for_select(["user"], :disabled => ["Select One"])

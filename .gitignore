@@ -8,3 +8,4 @@ log/
 .idea/notedata.iml
 .idea/.generators
 db/development.sqlite3
+db/test.sqlite3

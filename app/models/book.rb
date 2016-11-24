@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
 
-  validates :name, presence: true
+  validates :name, presence: { message: "не может быть пустым" }
 
   has_many :notes
   has_many :taggings

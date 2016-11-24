@@ -1,7 +1,7 @@
 class Note < ApplicationRecord
 
 
-   validates :name, presence: true
+   validates :name, presence: { message: "не может быть пустым" }
 
   belongs_to :book
 
