@@ -5,14 +5,12 @@ Rails.application.routes.draw do
 
   end
 
-
  # get 'auth/:provider/callback', to: 'sessions#create'
  # get 'auth/failure', to: redirect('/')
  # get 'signout', to: 'sessions#destroy', as: 'signout'
 
   get 'home/index'
 
- # devise_for :users, controllers: {registrations: 'registrations' }
   get 'persons/profile'
 
   root 'home#index'
