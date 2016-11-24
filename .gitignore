@@ -7,3 +7,4 @@ log/
 .idea/workspace.xml
 .idea/notedata.iml
 .idea/.generators
+db/development.sqlite3
