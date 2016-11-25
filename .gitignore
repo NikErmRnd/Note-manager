@@ -9,3 +9,4 @@ log/
 .idea/.generators
 db/development.sqlite3
 db/test.sqlite3
+db/production.sqlite3

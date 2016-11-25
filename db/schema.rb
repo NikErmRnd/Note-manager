@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20161109172258) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "books", force: :cascade do |t|
     t.string   "name"
     t.string   "access"
@@ -35,8 +38,8 @@ ActiveRecord::Schema.define(version: 20161109172258) do
     t.integer  "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_taggings_on_book_id"
-    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["book_id"], name: "index_taggings_on_book_id", using: :btree
+    t.index ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
@@ -65,8 +68,10 @@ ActiveRecord::Schema.define(version: 20161109172258) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "taggings", "books"
+  add_foreign_key "taggings", "tags"
 end
