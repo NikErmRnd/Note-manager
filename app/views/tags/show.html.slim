@@ -1,8 +1,11 @@
-
-|Выбранный тег:
-h1 = @tag.name
-
+br
+br
+br
 = link_to 'Блокноты', books_path , class: "btn btn-primary"
+br
+br
+h4 Выбранный тег:
+h1 = @tag.name
 
 - if @tag.books.empty?
   h2 Блокнотов нет

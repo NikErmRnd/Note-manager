@@ -6,7 +6,6 @@ class Book < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
 
-
   def all_tags
      self.tags.map(&:name).join(', ')
   end

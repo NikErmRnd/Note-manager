@@ -1,0 +1,28 @@
+.page-header
+  .btn-group.pull-right
+    .btn-toolbar
+      = button_to('Создать блокнот', new_book_path, class: "btn btn-sm btn-primary", method: :get)
+  h1 Блокноты
+
+- if @books.empty?
+  b Блокнотов не найдено
+- else
+  table.table
+    thead
+      tr
+        th.col-sm-4 Название
+        th.col-sm-2 Теги
+        th.col-sm-1
+        th.col-sm-1
+    tbody
+      tr
+        - @books.each do |i|
+          tr
+            td
+              = link_to i.name, book_notes_path(i)
+            td
+              = render partial: "books/tags", locals: { tags: i.tags }
+            td
+              = button_to "редактировать", edit_book_path(i, admin: params[:admin]), method: :get, class: "btn btn-sm btn-primary"
+            td
+              = button_to "удалить", book_path(i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"}, class: "btn btn-sm btn-primary"
