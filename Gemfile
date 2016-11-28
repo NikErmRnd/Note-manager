@@ -26,6 +26,7 @@ gem 'haml-rails'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
 
 
 gem 'devise'
@@ -33,6 +34,7 @@ gem 'paperclip'
 gem 'cocaine'
 gem 'bootstrap-sass'
 gem 'haml2slim'
+gem 'certified'
 
 #gem 'twitter-bootstrap-rails'
 

@@ -3,6 +3,8 @@
 Devise.setup do |config|
 
   config.omniauth :github, '8f79e70be47f4b121b8f', '31c6af4888ad9c61e19c71c8cba2c0fbc0e3e208', :scope => 'user:email'
+  config.omniauth :google_oauth2, '414681429887-pk2gcmkub42cjoqi5vefhglsdpea0qg3.apps.googleusercontent.com', 'UKE9a45zEQEjz9AtsFq0l2ol', { }
+
   #config.omniauth :facebook, "797020357105836", "3d8afb5470d518e78b9e601e3203667b"
   #config.omniauth :vkontakte, "5735317", "5LQp3jMrXxN3KH26hpHS",
 
