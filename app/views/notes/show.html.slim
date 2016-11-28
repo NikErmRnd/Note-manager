@@ -1,6 +1,7 @@
-h1 Note
+h1
+  =t("notes.show.index")
 
-= link_to 'Вернуться к заметкам', :back, class: "btn btn-sm btn-primary"
+= link_to t("notes.show.home"), :back, class: "btn btn-sm btn-primary"
 
 ul
   li= @note.name

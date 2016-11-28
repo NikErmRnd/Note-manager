@@ -1,17 +1,19 @@
 .page-header
   .btn-group.pull-right
     .btn-toolbar
-      = button_to('Создать блокнот', new_book_path, class: "btn btn-sm btn-primary", method: :get)
-  h1 Блокноты
+      = button_to(t("books.index.createbooks"), new_book_path, class: "btn btn-sm btn-primary", method: :get)
+  h1
+    =t("books.index.index")
 
 - if @books.empty?
-  b Блокнотов не найдено
+  b
+    =t("books.empty")
 - else
   table.table
     thead
       tr
-        th.col-sm-4 Название
-        th.col-sm-2 Теги
+        th.col-sm-4 =t("books.index.tablecolumnname")
+        th.col-sm-2 =t("books.index.tablecolumntags")
         th.col-sm-1
         th.col-sm-1
     tbody
@@ -23,6 +25,6 @@
             td
               = render partial: "books/tags", locals: { tags: i.tags }
             td
-              = button_to "редактировать", edit_book_path(i, admin: params[:admin]), method: :get, class: "btn btn-sm btn-primary"
+              = button_to t("books.index.tablebtnedit"), edit_book_path(i, admin: params[:admin]), method: :get, class: "btn btn-sm btn-primary"
             td
-              = button_to "удалить", book_path(i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"}, class: "btn btn-sm btn-primary"
+              = button_to t("books.index.tablebtndelete"), book_path(i, admin: params[:admin]), method: :delete, data: { confirm: t("books.index.confirm")}, class: "btn btn-sm btn-primary"

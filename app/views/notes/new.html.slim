@@ -1,5 +1,6 @@
-h1 Создание новой заметки
-= link_to 'Вернуться к заметкам', :back , class: "btn btn-sm btn-primary"
+h1
+  =t("notes.new.index")
+= link_to t("notes.new.back"), :back , class: "btn btn-sm btn-primary"
 = simple_form_for([:book, @note]) do |f|
  = render partial: "form", locals: {f: f}
- p= f.submit "Создать" , class: "btn btn-sm btn-primary"
+ p= f.submit t("notes.new.submit") , class: "btn btn-sm btn-primary"

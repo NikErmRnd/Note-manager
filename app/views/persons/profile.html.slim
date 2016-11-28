@@ -1,15 +1,18 @@
-﻿h1 Профиль пользователя
+﻿h1
+  =t("persons.profile.index")
 | email:&nbsp
 = current_user.email
 br
-| Дата создания:&nbsp
+=t("persons.profile.datecreate")
+|:&nbsp
 = current_user.created_at
 br
-| Роль:&nbsp
+=t("persons.profile.role")
+|:&nbsp
 = current_user.role
 br
 = image_tag current_user.avatar.url(:medium)
 
 
-td = button_to "редактировать профиль", edit_user_registration_path, method: :get, class: "btn btn-primary"
-= link_to 'На главную', home_index_path, class: "btn btn-primary"
+td = button_to t("persons.profile.btnedit"), edit_user_registration_path, method: :get, class: "btn btn-primary"
+= link_to t("persons.profile.home"), home_index_path, class: "btn btn-primary"

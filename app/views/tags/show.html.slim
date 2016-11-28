@@ -1,16 +1,19 @@
 br
 br
 br
-= link_to 'Блокноты', books_path , class: "btn btn-primary"
+= link_to t("tags.show.index"), books_path , class: "btn btn-primary"
 br
 br
-h4 Выбранный тег:
+h4
+  =t("tags.show.current")
+  |:
 h1 = @tag.name
 
 - if @tag.books.empty?
-  h2 Блокнотов нет
+  h2
+    =t("tags.show.empty")
 - else
   - @tag.books.each do |book|
     div
       h3 = book.name
-      = link_to "Перейти", book , class: "btn btn-primary"
+      = link_to t("tags.show.btnnext"), book , class: "btn btn-primary"

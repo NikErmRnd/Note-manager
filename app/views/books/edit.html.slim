@@ -1,6 +1,7 @@
-h1 Редактирование блокнота
-= link_to 'Блокноты', books_path , class: "btn btn-sm btn-primary"
+h1
+  =t("books.edit.index")
+= link_to t("books.edit.books"), books_path , class: "btn btn-sm btn-primary"
 = simple_form_for @book do |f|
   = render partial: "form", locals: {f: f}
-  p = f.submit "Сохранить", class: "btn btn-sm btn-primary"
+  p = f.submit t("books.edit.submit"), class: "btn btn-sm btn-primary"
 

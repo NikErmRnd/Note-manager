@@ -5,17 +5,19 @@
       = link_to 'Создать заметку', new_book_note_path, class: "btn btn-sm btn-primary"
       = link_to 'Блокноты', books_path, class: "btn btn-sm btn-primary"
 
-h1 Заметки
+h1
+  =t("notes.index.index")
 
 - if @notes.empty?
-  b Заметок не найдено
+  b
+    =t("notes.index.empty")
 - else
   table.table
     thead
       tr
-        th.col-sm-2 Имя
-        th.col-sm-4 Содержание
-        th.col-sm-2 Теги
+        th.col-sm-2 =t("notes.index.tablecolumnname")
+        th.col-sm-4 =t("notes.index.tablecolumnbody")
+        th.col-sm-2 =t("notes.index.tablecolumntags")
         th.col-sm-1
         th.col-sm-1
     tbody
@@ -25,5 +27,5 @@ h1 Заметки
             td= link_to i.name, book_note_path(i.book_id , i)
             td= i.body
             td= i.tags
-            td= button_to "редактировать", edit_book_note_path(i.book_id , i, admin: params[:admin]), method: :get , class: "btn btn-sm btn-primary"
-            td= button_to "удалить", book_note_path(i.book_id , i, admin: params[:admin]), method: :delete, data: { confirm: "Точно удалить?"} , class: "btn btn-sm btn-primary"
+            td= button_to t("notes.index.tablebtnedit"), edit_book_note_path(i.book_id , i, admin: params[:admin]), method: :get , class: "btn btn-sm btn-primary"
+            td= button_to t("notes.index.tablebtndelete"), book_note_path(i.book_id , i, admin: params[:admin]), method: :delete, data: { confirm: t("notes.index.confirm")} , class: "btn btn-sm btn-primary"

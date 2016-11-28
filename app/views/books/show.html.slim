@@ -1,6 +1,7 @@
-h1 Блокнот
+h1
+  =t("books.show.index")
 ul
   li= @book.name
   li= @book.access
   li= @book.tags.map { |t| t.name }.join(' ')
-= link_to 'Вернуться к блокнотам', books_path, class: "btn btn-sm btn-primary"
+= link_to t("books.show.back"), books_path, class: "btn btn-sm btn-primary"

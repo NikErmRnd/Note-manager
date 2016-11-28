@@ -1,7 +1,8 @@
-h1 Новый блокнот
-= link_to 'Вернуться к блокнотам', books_path, class: "btn btn-sm btn-primary"
+h1
+  =t("books.new.index")
+= link_to t("books.new.back"), books_path, class: "btn btn-sm btn-primary"
 = simple_form_for @book do |f|
  =render partial: "form", locals: {f: f}
 
- p= f.submit "Создать", class: "btn btn-sm btn-primary"
+ p= f.submit t("books.new.submit"), class: "btn btn-sm btn-primary"
 
