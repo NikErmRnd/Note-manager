@@ -25,9 +25,7 @@ Rails.application.routes.draw do
 
   resources :books do
     resources :notes do
-=begin
       collection { post :import}
-=end
     end
   end
 end

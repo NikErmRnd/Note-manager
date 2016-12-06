@@ -1,11 +1,8 @@
 ru:
    activerecord:
-      models:
-         note: 'Заметка'
-      attributes:
-         note:
-           name: 'Название'
-   errors: 'не может быть пустым'
+      errors:
+        messages:
+          record_invalid: "Validation failed: %{errors}"
    home:
       index: 'Главная страница'
       enter: 'Войти'

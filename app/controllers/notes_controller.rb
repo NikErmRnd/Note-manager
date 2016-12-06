@@ -15,16 +15,17 @@ class NotesController < ApplicationController
    @notes = @notes.where(book_id: @books)
 
 
+   respond_to do |format|
+     format.html
+     format.csv { send_data @notes.to_csv }
+   end
+
   end
 
-=begin
   def import
     Note.import(params[:file])
-    redirect_to root_url, notice: "Activiti Data imported!"
-
+    redirect_to book_notes_path, notice: "Note imported."
   end
-=end
-
 
   def show
     unless @note

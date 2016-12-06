@@ -5,10 +5,9 @@
       = link_to 'Создать заметку', new_book_note_path, class: "btn btn-sm btn-primary"
       = link_to 'Блокноты', books_path, class: "btn btn-sm btn-primary"
       div
-        h4 Import
-        = form_tag root_path, multipart: true do
-          = file_field_tag :file
-          = submit_tag "import csv"
+        h4 Download:
+        = link_to "CSV", book_notes_path(format: "csv") , class: "btn btn-sm btn-primary"
+      div
 h1
   =t("notes.index.index")
 
@@ -33,3 +32,9 @@ h1
             td= i.tags
             td= button_to t("notes.index.tablebtnedit"), edit_book_note_path(i.book_id , i, admin: params[:admin]), method: :get , class: "btn btn-sm btn-primary"
             td= button_to t("notes.index.tablebtndelete"), book_note_path(i.book_id , i, admin: params[:admin]), method: :delete, data: { confirm: t("notes.index.confirm")} , class: "btn btn-sm btn-primary"
+
+
+  h2 Import
+  = form_tag import_book_notes_path, multipart: true do
+   = file_field_tag :file
+   = submit_tag "Import"
