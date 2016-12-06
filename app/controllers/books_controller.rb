@@ -16,6 +16,17 @@ class BooksController < ApplicationController
       @books = Book.where(access: current_user.role)
     end
 
+    respond_to do |format|
+      format.html
+      format.csv { send_data @books.to_csv }
+    end
+
+  end
+
+
+  def import
+    Book.import(params[:file])
+    redirect_to books_path, notice: "Book imported."
   end
 
   def show

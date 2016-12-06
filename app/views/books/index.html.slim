@@ -2,6 +2,11 @@
   .btn-group.pull-right
     .btn-toolbar
       = button_to(t("books.index.createbooks"), new_book_path, class: "btn btn-sm btn-primary", method: :get)
+      div
+        h4 Download:
+        = link_to "CSV", books_path(format: "csv") , class: "btn btn-sm btn-primary"
+      div
+
   h1
     =t("books.index.index")
 
@@ -28,3 +33,8 @@
               = button_to t("books.index.tablebtnedit"), edit_book_path(i, admin: params[:admin]), method: :get, class: "btn btn-sm btn-primary"
             td
               = button_to t("books.index.tablebtndelete"), book_path(i, admin: params[:admin]), method: :delete, data: { confirm: t("books.index.confirm")}, class: "btn btn-sm btn-primary"
+
+  h2 Import
+  = form_tag import_books_path, multipart: true do
+    = file_field_tag :file
+    = submit_tag "Import"

@@ -20,6 +20,14 @@ Rails.application.routes.draw do
   resources :tags, only: [:show]
 
   resources :books do
-    resources :notes
+    collection { post :import}
+  end
+
+  resources :books do
+    resources :notes do
+=begin
+      collection { post :import}
+=end
+    end
   end
 end

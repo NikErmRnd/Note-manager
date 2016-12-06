@@ -4,7 +4,11 @@
       = link_to 'На главную', home_index_path, class: "btn btn-sm btn-primary"
       = link_to 'Создать заметку', new_book_note_path, class: "btn btn-sm btn-primary"
       = link_to 'Блокноты', books_path, class: "btn btn-sm btn-primary"
-
+      div
+        h4 Import
+        = form_tag root_path, multipart: true do
+          = file_field_tag :file
+          = submit_tag "import csv"
 h1
   =t("notes.index.index")
 

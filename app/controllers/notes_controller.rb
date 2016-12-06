@@ -17,6 +17,14 @@ class NotesController < ApplicationController
 
   end
 
+=begin
+  def import
+    Note.import(params[:file])
+    redirect_to root_url, notice: "Activiti Data imported!"
+
+  end
+=end
+
 
   def show
     unless @note
