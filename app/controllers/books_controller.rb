@@ -10,10 +10,10 @@ class BooksController < ApplicationController
     @books = Book
 
 
-    if (current_user.role == 'admin')
+    if (current_user.roles == 'admin')
       @books = @books.all
     else
-      @books = Book.where(access: current_user.role)
+      @books = Book.where(access: current_user.roles)
     end
 
     respond_to do |format|

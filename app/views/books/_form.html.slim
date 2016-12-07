@@ -6,7 +6,7 @@ br
 = f.text_field :all_tags
 br
 |Доступ&nbsp;
-- if current_user.role == 'admin'
+- if current_user.roles == 'admin'
   = f.select :access, options_for_select(["admin", "user"],:disabled => ["Select One"])
 - else
   = f.select :access, options_for_select(["user"],:disabled => ["Select One"])

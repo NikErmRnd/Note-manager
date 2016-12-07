@@ -7,10 +7,10 @@ class NotesController < ApplicationController
   def index
 
    @notes = Note
-   if (current_user.role == 'admin')
+   if (current_user.roles == 'admin')
      @notes = @notes.all
    else
-   @notes = Note.where(access: current_user.role)
+   @notes = Note.where(access: current_user.roles)
    end
    @notes = @notes.where(book_id: @books)
 

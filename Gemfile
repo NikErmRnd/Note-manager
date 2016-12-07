@@ -21,19 +21,15 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'coffee-script-source'
 
-gem 'haml'
-gem 'haml-rails'
+
 gem 'slim-rails'
 gem 'simple_form'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
-
-
+gem 'cancancan'
 gem 'devise'
 gem 'paperclip'
-gem 'cocaine'
 gem 'bootstrap-sass'
-gem 'haml2slim'
 gem 'certified'
 
 #gem 'twitter-bootstrap-rails'

@@ -4,70 +4,79 @@ ru:
         messages:
           record_invalid: "Validation failed: %{errors}"
    home:
-      index: 'Главная страница'
-      enter: 'Войти'
-      reg: 'Зарегистрироваться'
-      books: 'Блокноты'
+     index: 'Главная страница'
+     enter: 'Войти'
+     reg: 'Зарегистрироваться'
+     books: 'Блокноты'
    notes:
-         index:
-               index: 'Заметки'
-               empty: 'Заметок не найдено'
-               tablecolumnname: 'Имя'
-               tablecolumnbody: 'Содержание'
-               tablecolumntags: 'Теги'
-               tablebtnedit: 'редактировать'
-               tablebtndelete: 'удалить'
-               confirm: 'Точно удалить?'
-         show:
-              home: 'Вернуться к заметкам'
-              index: 'Заметка'
-         new:
-             index: 'Новая заметка'
-             back: 'Вернуться к заметкам'
-             submit: 'Создать'
-         edit:
-              index: 'Редактирование заметки'
-              notes: 'Вернуться к заметкам'
-              submit: 'Сохранить'
-         form:
-              name: 'Имя'
+     index:
+       index: 'Заметки'
+       empty: 'Заметок не найдено'
+       tablecolumnname: 'Имя'
+       tablecolumnbody: 'Содержание'
+       tablecolumntags: 'Теги'
+       tablebtnedit: 'редактировать'
+       tablebtndelete: 'удалить'
+       confirm: 'Точно удалить?'
+     show:
+       home: 'Вернуться к заметкам'
+       index: 'Заметка'
+     new:
+       index: 'Новая заметка'
+       back: 'Вернуться к заметкам'
+       submit: 'Создать'
+     edit:
+       index: 'Редактирование заметки'
+       notes: 'Вернуться к заметкам'
+       submit: 'Сохранить'
+     form:
+       name: 'Имя'
    books:
-         index:
-               index: 'Блокноты'
-               createbooks: 'Создать блокнот'
-               empty: 'Блокнотов не найдено'
-               tablecolumnname: 'Название'
-               tablecolumntags: 'Теги'
-               tablebtnedit: 'редактировать'
-               tablebtndelete: 'удалить'
-               confirm: 'Точно удалить?'
-         show:
-              index: 'Блокнот'
-              back: 'Вернуться к блокнотам'
-         new:
-             index: 'Новый блокнот'
-             back: 'Вернуться к блокнотам'
-             submit: 'Создать'
-         edit:
-              index: 'Редактирование блокнота'
-              books: 'Блокноты'
-              submit: 'Сохранить'
-         form:
-              name: 'Имя'
+     index:
+      index: 'Блокноты'
+      createbooks: 'Создать блокнот'
+      empty: 'Блокнотов не найдено'
+      tablecolumnname: 'Название'
+      tablecolumntags: 'Теги'
+      tablebtnedit: 'редактировать'
+      tablebtndelete: 'удалить'
+      confirm: 'Точно удалить?'
+     show:
+       index: 'Блокнот'
+       back: 'Вернуться к блокнотам'
+     new:
+       index: 'Новый блокнот'
+       back: 'Вернуться к блокнотам'
+       submit: 'Создать'
+     edit:
+       index: 'Редактирование блокнота'
+       books: 'Блокноты'
+       submit: 'Сохранить'
+     form:
+       name: 'Имя'
    layouts:
-           application:
-                       hello: 'Здравствуйте'
-                       exit: 'Выход'
+     application:
+       hello: 'Здравствуйте'
+       exit: 'Выход'
    persons:
-           profile:
-                   index: 'Профиль пользователя'
-                   datecreate: 'Дата создания'
-                   role: 'Роль'
-                   btnedit: 'редактировать профиль'
-                   home: 'На главную'
+     profile:
+       index: 'Профиль пользователя'
+       datecreate: 'Дата создания'
+       role: 'Роль'
+       btnedit: 'редактировать профиль'
+       home: 'На главную'
    tags:
-        show:
-             index: 'Блокноты'
-             current: 'Выбранный тег'
-             empty: 'Блокнотов нет'
-             btnnext: 'Перейти'
+     show:
+       index: 'Блокноты'
+       current: 'Выбранный тег'
+       empty: 'Блокнотов нет'
+       btnnext: 'Перейти'
+   index:
+     index: 'Блокноты'
+     createbooks: 'Создать блокнот'
+     empty: 'Блокнотов не найдено'
+     tablecolumnname: 'Название'
+     tablecolumntags: 'Теги'
+     tablebtnedit: 'редактировать'
+     tablebtndelete: 'удалить'
+     confirm: 'Точно удалить?'
