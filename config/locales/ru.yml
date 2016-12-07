@@ -3,6 +3,13 @@ ru:
       errors:
         messages:
           record_invalid: "Validation failed: %{errors}"
+        models:
+          user:
+            attributes:
+              password:
+                blank: "не может быть пустым"
+              email:
+                blank: "не может быть пустым"
    home:
      index: 'Главная страница'
      enter: 'Войти'
@@ -71,12 +78,3 @@ ru:
        current: 'Выбранный тег'
        empty: 'Блокнотов нет'
        btnnext: 'Перейти'
-   index:
-     index: 'Блокноты'
-     createbooks: 'Создать блокнот'
-     empty: 'Блокнотов не найдено'
-     tablecolumnname: 'Название'
-     tablecolumntags: 'Теги'
-     tablebtnedit: 'редактировать'
-     tablebtndelete: 'удалить'
-     confirm: 'Точно удалить?'
