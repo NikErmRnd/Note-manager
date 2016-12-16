@@ -2,24 +2,14 @@ class NotesController < ApplicationController
 
   before_action :find_note
   before_filter :authenticate_user!
-  before_action :set_book, only: [:index, :show]
+  before_action :set_book, only: [:index, :show, :create]
   before_action :check_if_admin, only: [:destroy]
   def index
-
-   @notes = Note
-   if (current_user.roles == 'admin')
-     @notes = @notes.all
-   else
-   @notes = Note.where(access: current_user.roles)
-   end
-   @notes = @notes.where(book_id: @books)
-
-
+   @notes = @book.notes
    respond_to do |format|
      format.html
      format.csv { send_data @notes.to_csv }
    end
-
   end
 
   def import
@@ -40,17 +30,13 @@ class NotesController < ApplicationController
 
   # /notes POST
   def create
-
     note_params = params.require(:note).permit!
-    @note = Note.create(note_params)
+    @note = @book.notes.create(note_params)
     if @note.errors.empty?
       redirect_to book_notes_path # /notes/:id
-
     else
       render "new"
-
     end
-
   end
 
 
@@ -60,12 +46,9 @@ class NotesController < ApplicationController
 
   # /note/1 PUT
   def update
-
     @note.update_attributes(params.require(:note).permit!)
-
     if @note.errors.empty?
       redirect_to book_notes_path(1, @note)
-
     else
       render "edit"
     end
@@ -90,7 +73,7 @@ class NotesController < ApplicationController
 
 
   def set_book
-    @books = Book.find(params[:book_id])
+    @book = Book.find(params[:book_id])
   end
 
 end

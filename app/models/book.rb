@@ -4,23 +4,26 @@ class Book < ApplicationRecord
 
   validates :name, presence: { message: "не может быть пустым" }
 
+  has_and_belongs_to_many :users
+
   has_many :notes
   has_many :taggings
   has_many :tags, through: :taggings
 
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
-      csv << ["id","name","access"]
+      csv << ["name","access"]
       all.each do |book|
-        csv << book.attributes.values_at(*["id","name","access"])
+        csv << book.attributes.values_at(*["name","access"])
       end
     end
   end
 
-  def self.import(file)
+  def self.import(file, user = nil)
     CSV.foreach(file.path, headers: true) do |row|
-      book = find_by_id(row["id"]) || new
+      book = find_by(name: row["name"]) || new
       book.attributes = row.to_hash.slice(*column_names)
+      book.users << user
       book.save!
     end
   end

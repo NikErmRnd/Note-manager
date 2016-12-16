@@ -6,14 +6,10 @@ class BooksController < ApplicationController
   before_action :check_if_admin, only: [:destroy]
 
   def index
-
-    @books = Book
-
-
-    if (current_user.roles == 'admin')
-      @books = @books.all
+    if current_user.admin?
+      @books = Book.all
     else
-      @books = Book.where(access: current_user.roles)
+      @books = current_user.books
     end
 
     respond_to do |format|
@@ -25,7 +21,7 @@ class BooksController < ApplicationController
 
 
   def import
-    Book.import(params[:file])
+    Book.import(params[:file], current_user)
     redirect_to books_path, notice: "Book imported."
   end
 
@@ -40,17 +36,13 @@ class BooksController < ApplicationController
   end
 
   def create
-
     book_params = params.require(:book).permit!
-    @book = Book.create(book_params)
+    @book = current_user.books.create(book_params)
     if @book.errors.empty?
-      redirect_to book_path(@book) # /books/:id
-
+      redirect_to books_path # /books/:id
     else
       render "new"
-
     end
-
   end
 
 
@@ -60,16 +52,12 @@ class BooksController < ApplicationController
 
   # /note/1 PUT
   def update
-
     @book.update_attributes(params.require(:book).permit!)
-
     if @book.errors.empty?
       redirect_to book_path(@book)
     else
       render "edit"
     end
-
-
   end
 
   def destroy

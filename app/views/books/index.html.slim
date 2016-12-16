@@ -34,6 +34,7 @@
             td
               = button_to t("books.index.tablebtndelete"), book_path(i, admin: params[:admin]), method: :delete, data: { confirm: t("books.index.confirm")}, class: "btn btn-sm btn-primary"
 
+  - if can? :import, Book
   h2 Import
   = form_tag import_books_path, multipart: true do
     = file_field_tag :file

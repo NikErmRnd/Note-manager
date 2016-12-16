@@ -8,7 +8,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   devise :omniauthable
-  #enum role: { member: 1, admin: 2 }
+  enum role: { user: 1, admin: 2 }
+
+  has_and_belongs_to_many :books
 
   before_create :assign_default_role
 
@@ -21,29 +23,10 @@ class User < ApplicationRecord
       end
     end
 
-
-    ROLES = %i[admin user]
-
-    def roles=(roles)
-      roles = [*roles].map { |r| r.to_sym }
-      self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.inject(0, :+)
-    end
-
-    def roles
-      ROLES.reject do |r|
-        ((roles_mask.to_i || 0) & 2**ROLES.index(r)).zero?
-      end
-    end
-
-    def has_role?(role)
-      roles.include?(role)
-    end
-
-
     private
 
     def assign_default_role
-      self.roles = "user"
+      self.role = 1
     end
 
 

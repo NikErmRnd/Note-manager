@@ -32,6 +32,7 @@ gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'certified'
 gem 'devise-i18n'
+gem 'carrierwave'
 #gem 'twitter-bootstrap-rails'
 
 

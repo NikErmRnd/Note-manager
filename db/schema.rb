@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207165403) do
+ActiveRecord::Schema.define(version: 20161216172011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(version: 20161207165403) do
     t.text     "tags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "books_users", id: false, force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "images", force: :cascade do |t|
@@ -40,6 +45,7 @@ ActiveRecord::Schema.define(version: 20161207165403) do
     t.datetime "updated_at", null: false
     t.text     "access"
     t.text     "book_id"
+    t.string   "image"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -70,14 +76,13 @@ ActiveRecord::Schema.define(version: 20161207165403) do
     t.text     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.integer  "role"
     t.text     "provider"
     t.text     "uid"
     t.text     "avatar_file_name"
     t.text     "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.integer  "roles_mask"
+    t.integer  "role"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

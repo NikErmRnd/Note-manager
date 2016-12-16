@@ -17,7 +17,7 @@ class Note < ApplicationRecord
 
    def self.import(file)
       CSV.foreach(file.path, headers: true) do |row|
-         note = find_by_id(row["id"]) || new
+         note = find_by_id(row["id".to_i]) || new
          note.attributes = row.to_hash.slice(*column_names)
          note.save!
       end

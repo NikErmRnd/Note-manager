@@ -6,7 +6,3 @@ h1
 - else
   = button_to(t("home.enter"), new_user_session_path, class: "btn btn-sm btn-primary", method: :get)
   = button_to(t("home.reg"), new_user_registration_path, class: "btn btn-sm btn-primary", method: :get)
-  /= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-sm btn-primary", method: :get
-  /= link_to "Sign in with Facebook", user_vkontakte_omniauth_authorize_path
-  /= link_to('Sign in with Vkontakte', user_vlontakte_omniauth_authorize_path, :class => 'btn btn-sm btn-primary', method: :get)
-
