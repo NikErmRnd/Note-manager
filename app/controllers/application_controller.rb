@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def check_if_admin
-     render text: "Access denied, you is not admin's right", status: 403 unless (current_user.roles=="admin")
+     render text: "Access denied, you is not admin's right", status: 403 unless (current_user.admin?)
     # render_403 unless params[:admin]
   end
 

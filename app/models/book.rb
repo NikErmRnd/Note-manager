@@ -12,16 +12,16 @@ class Book < ApplicationRecord
 
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
-      csv << ["name","access"]
+      csv << ["name","tags"]
       all.each do |book|
-        csv << book.attributes.values_at(*["name","access"])
+        csv << book.attributes.values_at(*["name","tags"])
       end
     end
   end
 
   def self.import(file, user = nil)
     CSV.foreach(file.path, headers: true) do |row|
-      book = find_by(name: row["name"]) || new
+      book = find_by(name: row["name".to_s]) || new
       book.attributes = row.to_hash.slice(*column_names)
       book.users << user
       book.save!

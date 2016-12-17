@@ -34,7 +34,8 @@ h1
             td= button_to t("notes.index.tablebtndelete"), book_note_path(i.book_id , i, admin: params[:admin]), method: :delete, data: { confirm: t("notes.index.confirm")} , class: "btn btn-sm btn-primary"
 
 
+- if can? :import, Note
   h2 Import
-  = form_tag import_book_notes_path, multipart: true do
-   = file_field_tag :file
-   = submit_tag "Import"
+  = form_tag import_books_path, multipart: true do
+    = file_field_tag :file
+    = submit_tag "Import"

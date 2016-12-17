@@ -8,9 +8,9 @@ class Note < ApplicationRecord
 
    def self.to_csv(options = {})
       CSV.generate(options) do |csv|
-         csv << ["id","name","body","access","book_id"]
+         csv << ["id","name","body","book_id"]
          all.each do |note|
-            csv << note.attributes.values_at(*["id","name","body","access","book_id"])
+            csv << note.attributes.values_at(*["id","name","body","book_id"])
          end
       end
    end

@@ -6,6 +6,8 @@ h1
 
 = simple_form_for([:book, @note]) do |f|
    = render partial: "form", locals: {f: f}
+
+
    br
    = f.submit t("notes.edit.submit") , class: "btn btn-sm btn-primary"
 

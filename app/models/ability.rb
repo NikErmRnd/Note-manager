@@ -12,6 +12,7 @@ class Ability
       # can :read, :all
       cannot :import, Book
       can :update, :Note
+      can :read, :all
     else
       can :read, :all
     end
